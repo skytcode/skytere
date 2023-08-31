@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  skytered The Skytere Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: skytered
+# processname: skytered
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/skytered, see below
+if [ -f /etc/sysconfig/skytered ]; then
+        . /etc/sysconfig/skytered
+fi
+
+RETVAL=0
+
+prog=skytered
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/skytered
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/skytered}
+
+# skytered defaults to /usr/bin/skytered, override with BITCOIND_BIN
+skytered=${BITCOIND_BIN-/usr/bin/skytered}
+
+# skytered opts default to -disablewallet, override with BITCOIND_OPTS
+skytered_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $skytered $skytered_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

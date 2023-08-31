@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/skytere_ar.qm</file>
+        <file alias="bg">locale/skytere_bg.qm</file>
+        <file alias="de">locale/skytere_de.qm</file>
+        <file alias="en">locale/skytere_en.qm</file>
+        <file alias="es">locale/skytere_es.qm</file>
+        <file alias="fi">locale/skytere_fi.qm</file>
+        <file alias="fr">locale/skytere_fr.qm</file>
+        <file alias="it">locale/skytere_it.qm</file>
+        <file alias="ja">locale/skytere_ja.qm</file>
+        <file alias="ko">locale/skytere_ko.qm</file>
+        <file alias="nl">locale/skytere_nl.qm</file>
+        <file alias="pl">locale/skytere_pl.qm</file>
+        <file alias="pt">locale/skytere_pt.qm</file>
+        <file alias="ro">locale/skytere_ro.qm</file>
+        <file alias="ru">locale/skytere_ru.qm</file>
+        <file alias="sk">locale/skytere_sk.qm</file>
+        <file alias="th">locale/skytere_th.qm</file>
+        <file alias="tr">locale/skytere_tr.qm</file>
+        <file alias="vi">locale/skytere_vi.qm</file>
+        <file alias="zh_CN">locale/skytere_zh_CN.qm</file>
+        <file alias="zh_TW">locale/skytere_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+usr/local/bin/skytere-qt usr/bin
+share/pixmaps/skytere32.xpm usr/share/pixmaps
+share/pixmaps/skytere16.xpm usr/share/pixmaps
+share/pixmaps/skytere128.png usr/share/pixmaps
+debian/skytere-qt.desktop usr/share/applications
+debian/skytere-qt.protocol usr/share/kde4/services/

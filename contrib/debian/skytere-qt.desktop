@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Skytere Core
+Comment=Skytere P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Skytere peer-to-peer Netzwerk
+Comment[fr]=Skytere, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Skytere, eşten eşe kriptografik sanal para birimi
+Exec=skytere-qt %u
+Terminal=false
+Type=Application
+Icon=skytere128
+MimeType=x-scheme-handler/skytere;
+Categories=Office;Finance;
